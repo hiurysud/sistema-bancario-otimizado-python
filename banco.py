@@ -71,12 +71,8 @@ class Conta:
 
     def depositar(self, valor):
         if valor > 0:
-            try:
-                self._saldo += valor    
-                print("\nDeposito realizado com sucesso")
-            except Exception as e:
-                print("Erro ao realizar o deposito: ")
-                return False
+            self._saldo += valor    
+            print("\nDeposito realizado com sucesso")
         else:
             print("\nOperação falhou")
             return False
